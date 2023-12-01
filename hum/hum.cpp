@@ -18,7 +18,7 @@ private:
 	string name;
 };
 
-class Student {
+class Student : public Human {
 public:
 	int group;
 	void study()
@@ -27,7 +27,7 @@ public:
 	}
 };
 
-class ExtramuralStudent {
+class ExtramuralStudent : public Student {
 public:
 	void study() 
 	{
@@ -36,7 +36,7 @@ public:
 
 };
 
-class Teacher {
+class Teacher : public Human {
 public:
 	string subject;
 };
