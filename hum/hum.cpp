@@ -9,14 +9,14 @@ public:
 		return name;
 	};
 
-	void SetName(name)
+	void SetName(string name)
 	{
 		this->name = name;
 	};
 
 private:
 	string name;
-}
+};
 
 class Student {
 public:
@@ -43,7 +43,7 @@ public:
 
 
 int main() {
-
+setlocale(LC_ALL, "ru");
 	
 	return 0;
 }
