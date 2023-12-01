@@ -43,7 +43,17 @@ public:
 
 
 int main() {
-setlocale(LC_ALL, "ru");
+	setlocale(LC_ALL, "ru");
+
+	Student st;
+	st.study();
+	st.SetName("Аня"); //обращение к свойствам объектов родительских классов
+	cout << st.GetName() << endl;
+
+	ExtramuralStudent extra;
+	extra.SetName("Витя"); //обращение к свойствам объектов родительских классов
+	cout << extra.GetName() << endl;
+
 	
 	return 0;
 }
