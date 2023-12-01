@@ -73,30 +73,31 @@ class Teacher : public Human {
 public:
 	string subject;
 
-	int SetCabinet(int Cabinet)
-	{
-		this->cabinet = cabinet;
-	}
-
-	int GetCabinet()
+	string GetCabinet()
 	{
 		return cabinet;
 	}
 
+	void SetCabinet(string cabinet)
+	{
+		this->cabinet = cabinet;
+	}
+
 private:
-	int cabinet;
+	string cabinet;
 
 };
 
 
 class Staff {
+
 public:
 	int GetSalary()
 	{
 		return salary;
 	}
 
-	int SetSalary(int salary)
+	void SetSalary(int salary)
 	{
 		this->salary = salary;
 	}
@@ -127,6 +128,20 @@ int main() {
 	extra.SetName("Витя"); //обращение к свойствам объектов родительских классов
 	cout << extra.GetName() << endl;
 
+	Teacher t;
+	t.SetCabinet("номер 6");
+	cout << "Кабинет учителя: ";
+	cout << t.GetCabinet() << endl;
+
+	Staff s;
+	s.SetSalary(30000);
+	cout << "Зарплата одного сотрудника: ";
+	cout << s.GetSalary() << endl;
+
+	School sh;
+	sh.SetSalary(1000000);
+	cout << "Зарплата для сотрудников: ";
+	cout << sh.GetSalary() << endl;
 	
 	return 0;
 }
